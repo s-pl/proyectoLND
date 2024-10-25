@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury House</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="logo">Luxury House</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#welcome">Inicio</a></li>
+                <li><a href="#house-renting">Casas</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome" id="welcome">
+            <h2>Bienvenido a Luxury House</h2>
+            <p>Disfruta de la experiencia más exclusiva en alojamiento de lujo. Con nuestros servicios personalizados, tu estancia será inolvidable.</p>
+            <img src="img/img-principal.jpg" class="img-principal" alt="imagen principal" style="border: 1px solid; border-radius: 20px;">
+        </section>
+
+       
+        <div id="houseModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="modalImage" src="./" alt="Imagen ampliada" style="width: 100%; height: auto;">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <p id="modalPrice"></p>
+                <button id="rentButton">Alquilar</button>
+            </div>
+        </div>
+
+        <section class="house-renting" id="house-renting">
+            <h2>Nuestras viviendas disponibles</h2>
+
+         
+            <div class="responsive">
+                <div class="gallery">
+                    <img class="gallery-image" src="img/img1.webp" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc"><i class="bi bi-geo-alt"></i> Las Palmas, España <button onclick="modal(1)" >Alquilar</button></div>
+                    
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery"  id="img2">
+                    <img class="gallery-image" src="img/img2.webp" alt="Forest" width="600" height="400">
+                    <div class="desc"><i class="bi bi-geo-alt"></i> Texas, EEUU <button onclick="modal(2)" >Alquilar</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery"  id="img3">
+                    <img class="gallery-image" src="img/img3.webp" alt="Northern Lights" width="600" height="400">
+                    <div class="desc"><i class="bi bi-geo-alt"></i> Rio de Janeiro, Brasil <button onclick="modal(3)" >Alquilar</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery"  id="img4">
+                    <img class="gallery-image" src="img/img4.webp" alt="Mountains" width="600" height="400">
+                    <div class="desc"><i class="bi bi-geo-alt"></i> Kyoto, Japón <button onclick="modal(4)" >Alquilar</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery"  id="img5">
+                    <img class="gallery-image" src="img/img5.webp" alt="Mountains" width="600" height="400">
+                    <div class="desc"><i class="bi bi-geo-alt"></i> Santorini, Grecia<button onclick="modal(5)" >Alquilar</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery"  id="img6">
+                    <img class="gallery-image" src="img/img6.webp" alt="Mountains" width="600" height="400">
+                    <div class="desc"><i class="bi bi-geo-alt"></i> Paris, Francia <button onclick="modal(6)" >Alquilar</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery"  id="img7">
+                    <img class="gallery-image" src="img/img7.webp" alt="Mountains" width="600" height="400">
+                    <div class="desc"><i class="bi bi-geo-alt"></i> Ciudad del Cabo, Sudáfrica <button onclick="modal(7)" >Alquilar</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery"  id="img8">
+                    <img class="gallery-image" src="img/img8.webp" alt="Mountains" width="600" height="400">
+                    <div class="desc"><i class="bi bi-geo-alt"></i> Sídney, Australia <button onclick="modal(8)" >Alquilar</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery"  id="img9">
+                    <img class="gallery-image" src="img/img9.webp" alt="Mountains" width="600" height="400">
+                    <div class="desc"><i class="bi bi-geo-alt"></i> Venecia, Italia <button onclick="modal(9)" >Alquilar</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery"  id="img10">
+                    <img class="gallery-image" src="img/img10.webp" alt="Mountains" width="600" height="400">
+                    <div class="desc"><i class="bi bi-geo-alt"></i> Hollywood, EEUU <button onclick="modal(10)" >Alquilar</button></div>
+                </div>
+            </div>
+
+            <p>Todos los alojamientos vienen perfectamente equipados con todo lo que usted necesitará para que su experiencia sea inmejorable.</p>
+        </section>
+        
+        <section class="contact" id="contact">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Contáctanos</h2>
+                    <p>Estamos aquí para ayudarte con cualquier consulta sobre nuestras propiedades de lujo.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <p>Madrid, España</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-envelope"></i>
+                            <p>info@luxuryhouse.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-telephone"></i>
+                            <p>+34 123 456 789</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Tu nombre">
+            
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Tu email" required>
+                       
+                    </div>
+                    
+                    <div class="form-group">
+
+                        <input type="tel" id="phone" placeholder="Tu teléfono" required>
+                      
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required placeholder="¿Que quieres saber? Escribenos." ></textarea>
+                       
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Realizado por Samuel Ponce Luna</p>
+    </footer>
+
+    <script src="js/modal.js"></script>
+</body>
+
+</html>
