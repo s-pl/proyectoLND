@@ -1,18 +1,19 @@
-# Proyecto de alquiler de villas de lujo
+#Luxury Villa Rental Project
+##Overview
 
-## Descripción
+This project features a responsive website designed for luxury villa rentals. It includes a header with navigation menu, an image gallery, a modal, and a contact section, all structured to create a seamless user experience across devices.
+Acknowledgments
 
-Este proyecto consiste en un sitio web responsive que incluye un header con menú de navegación, una galería de imágenes, un modal, y una sección de contacto. 
+    - Special thanks to Tiburcio for teaching me.
+    - A big shoutout to my classmates, including Carlos and Angelo, for their support and feedback.
 
+## Inspiration
 
-## Agradecimientos
+I drew inspiration for this project from this link on Dribbble.
 
-- Mayoritariamente a **Tiburcio**
-- Compañeros de clase, entre los que se encuentran **Carlos** y **Angelo**
-## Enlace inspiración
-Para este proyecto me inspiré en [este enlace](https://dribbble.com/shots/23551689-Housing-Rent-House-Property). 
-- No es muy parecido, de momento.
-- No usé la misma paleta de colores.
-## Autor
+    - While it’s not an exact replica, it inspired some layout ideas.
+    - The color palette used here differs from the one shown.
 
-Este proyecto fue desarrollado por **Samuel Ponce Luna**. 
+## Author
+
+This project was developed by Samuel Ponce Luna.
