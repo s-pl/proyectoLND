@@ -4,45 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury House</title>
+    <title>Luxury House | Alquiler de casas de lujo</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    
 </head>
 
 <body>
-    <header>
+    
+    <header id="web-header">
         <h1 id="logo">Luxury House</h1>
         <nav>
             <ul class="menu">
-                <li><a href="#welcome">Inicio</a></li>
-                <li><a href="#house-renting">Casas</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#welcome">Inicio</a>
+                    <i class="bi bi-house" id="first-icon"></i></li>
+                <li><a href="#house-renting">Casas</a><i class="bi bi-shop" id="second-icon"></i></li>
+                <li><a href="#client-reviews">Opiniones</a><i class="bi bi-person-raised-hand" id="third-icon"></i></i></li>
+                
+                <li><i class="bi bi-cart" style="margin-left: 10px;" id="cart"></i></li>
             </ul>
+            
+              
+              
         </nav>
+       
     </header>
 
+
+    <div id="house-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-house">&times;</span>
+            <img id="modal-image" src="./" alt="Imagen ampliada" style="width: 100%; height: auto;">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
+            <input type="date" id="trip-start"/>
+            <input type="date" id="trip-end"/>
+
+            <button id="rent-button">Alquilar</button>
+        </div>
+    </div>
+    <div id="cart-modal" class="cart-modal">
+        <span class="close-cart">&times;</span>
+        <div class="cart-modal-content">
+            
+        </div>
+    </div>
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-message-modal">&times;</span>
+            <h2>¡Mensaje enviado!</h2>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+    <button id="floating-cart-button" class="floating" onclick="showCart()">
+        <i class="bi bi-cart"></i>
+      </button>
+      
     <main>
+       
         <section class="welcome" id="welcome">
-            <h2>Bienvenido a Luxury House</h2>
-            <p>Disfruta de la experiencia más exclusiva en alojamiento de lujo. Con nuestros servicios personalizados, tu estancia será inolvidable.</p>
-            <img src="img/img-principal.jpg" class="img-principal" alt="imagen principal" style="border: 1px solid; border-radius: 20px;">
+            <div class="welcome-content">
+                <h1>Luxury House</h1>
+                <p>Vive una experiencia de lujo sin igual en cada rincón de tu estancia.</p>
+                <a href="#contact" class="welcome-btn">Contacta con nosotros</a>
+            </div>
         </section>
+        
 
        
-        <div id="houseModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <img id="modalImage" src="./" alt="Imagen ampliada" style="width: 100%; height: auto;">
-                <h2 id="modalTitle"></h2>
-                <p id="modalDescription"></p>
-                <p id="modalPrice"></p>
-                <button id="rentButton">Alquilar</button>
-            </div>
-        </div>
+        
 
         <section class="house-renting" id="house-renting">
-            <h2>Nuestras viviendas disponibles</h2>
+            <h2>Descubre algunas de nuestras viviendas</h2>
 
          
             <div class="responsive">
@@ -102,64 +137,44 @@
                 </div>
             </div>
 
-            <div class="responsive">
-                <div class="gallery"  id="img9">
-                    <img class="gallery-image" src="img/img9.webp" alt="Mountains" width="600" height="400">
-                    <div class="desc"><i class="bi bi-geo-alt"></i> Venecia, Italia <button onclick="modal(9)" >Alquilar</button></div>
-                </div>
-            </div>
+            
 
-            <div class="responsive">
-                <div class="gallery"  id="img10">
-                    <img class="gallery-image" src="img/img10.webp" alt="Mountains" width="600" height="400">
-                    <div class="desc"><i class="bi bi-geo-alt"></i> Hollywood, EEUU <button onclick="modal(10)" >Alquilar</button></div>
-                </div>
-            </div>
-
-            <p>Todos los alojamientos vienen perfectamente equipados con todo lo que usted necesitará para que su experiencia sea inmejorable.</p>
+            <p style="visibility: hidden;">Todos los alojamientos vienen perfectamente equipados con todo lo que usted necesitará para que su experiencia sea inmejorable.</p>
         </section>
         
+        <section class="client-reviews" id="client-reviews">
+            <h2>¿Qué opinan nuestros clientes?</h2>
+            <div class="reviews-container" id="reviews-container">
+                        
+                    </div>
+               
+        </section>
         <section class="contact" id="contact">
             <div class="contact-container">
                 <div class="contact-info">
                     <h2>Contáctanos</h2>
                     <p>Estamos aquí para ayudarte con cualquier consulta sobre nuestras propiedades de lujo.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="bi bi-geo-alt"></i>
-                            <p>Madrid, España</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="bi bi-envelope"></i>
-                            <p>info@luxuryhouse.com</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="bi bi-telephone"></i>
-                            <p>+34 123 456 789</p>
-                        </div>
-                    </div>
-                </div>
                 
-                <form class="contact-form">
+                <form class="contact-form" id="form">
                     <div class="form-group">
                         <input type="text" id="name" placeholder="Tu nombre">
-            
+                        <label for="error" id="name-error" style="display: none;">¡Error!, falta el nombre</label>
                     </div>
                     
                     <div class="form-group">
-                        <input type="email" id="email" placeholder="Tu email" required>
-                       
+                        <input type="email" id="email" placeholder="Tu email">
+                        <label for="error" id="email-error" style="display: none;">¡Error!, falta el email</label>
                     </div>
                     
                     <div class="form-group">
 
-                        <input type="tel" id="phone" placeholder="Tu teléfono" required>
-                      
+                        <input type="tel" id="phone" placeholder="Tu teléfono" >
+                        <label for="error" id="phone-error" style="display: none;">¡Error!, falta el teléfono</label>
                     </div>
                     
                     <div class="form-group">
-                        <textarea id="message" rows="5" required placeholder="¿Que quieres saber? Escribenos." ></textarea>
-                       
+                        <textarea id="msg" rows="5"  placeholder="¿Que quieres saber? Escribenos." ></textarea>
+                        <label for="error" id="msg-error" style="display: none;">¡Error!, falta el mensaje</label>
                     </div>
                     
                     <button type="submit" class="submit-btn">Enviar Mensaje</button>
@@ -169,10 +184,17 @@
     </main>
 
     <footer>
-        <p>Realizado por Samuel Ponce Luna</p>
+        <p class="easter-egg" style="float: left; ">Samuel Ponce Luna</p>
+        <i class="bi bi-facebook" style="font-size: 30px; float: inline-end;margin: 10px;"></i>
+        <i class="bi bi-github" style="font-size: 30px; float: inline-end;margin: 10px;"></i>
+        <i class="bi bi-youtube" style="font-size: 30px; float: inline-end; margin: 10px;"></i>
+        <i class="bi bi-twitter-x" style="font-size: 30px; float: inline-end; margin: 10px;"></i>
     </footer>
 
-    <script src="js/modal.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/formControl.js"></script>
+    <script src="js/listener.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>
