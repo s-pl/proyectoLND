@@ -20,7 +20,7 @@
                 <li><a href="#welcome">Inicio</a>
                     <i class="bi bi-house" id="first-icon"></i></li>
                 <li><a href="#house-renting">Casas</a><i class="bi bi-shop" id="second-icon"></i></li>
-                <li><a href="#client-reviews">Opiniones</a><i class="bi bi-person-raised-hand" id="third-icon"></i></i></li>
+                <li><a href="#client-reviews">Opiniones</a><i class="bi bi-person-raised-hand" id="third-icon"></i></li>
                 
                 <li><i class="bi bi-cart" style="margin-left: 10px;" id="cart"></i></li>
             </ul>
@@ -155,31 +155,32 @@
                     <h2>Contáctanos</h2>
                     <p>Estamos aquí para ayudarte con cualquier consulta sobre nuestras propiedades de lujo.</p>
                 
-                <form class="contact-form" id="form">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Tu nombre">
-                        <label for="error" id="name-error" style="display: none;">¡Error!, falta el nombre</label>
-                    </div>
-                    
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Tu email">
-                        <label for="error" id="email-error" style="display: none;">¡Error!, falta el email</label>
-                    </div>
-                    
-                    <div class="form-group">
-
-                        <input type="tel" id="phone" placeholder="Tu teléfono" >
-                        <label for="error" id="phone-error" style="display: none;">¡Error!, falta el teléfono</label>
-                    </div>
-                    
-                    <div class="form-group">
-                        <textarea id="msg" rows="5"  placeholder="¿Que quieres saber? Escribenos." ></textarea>
-                        <label for="error" id="msg-error" style="display: none;">¡Error!, falta el mensaje</label>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
-                </form>
+                    <form class="contact-form" id="form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Tu nombre">
+                            <label for="name" id="name-error" class="error" style="display: none;">¡Error!, falta el nombre</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Tu email">
+                            <label for="email" id="email-error" class="error" style="display: none;">¡Error!, falta el email</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Tu teléfono">
+                            <label for="phone" id="phone-error" class="error" style="display: none;">¡Error!, falta el teléfono</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="msg" name="msg" rows="5" placeholder="¿Que quieres saber? Escribenos."></textarea>
+                            <label for="msg" id="msg-error" class="error" style="display: none;">¡Error!, falta el mensaje</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    </form>
+                </div>
             </div>
+          
         </section>
     </main>
 
