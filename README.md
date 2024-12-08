@@ -25,17 +25,19 @@ A NoSQL (document-based) database was used to store user data, such as wishlists
 
 ```json
 {
-  "uid": "user123",                
-  "wishlistArray": ["house1", "house2"],  
-  "houseArray": [                    
-    {
-      "houseId": "house3"
-    },
-    {
-      "houseId": "house4",
-    }
-  ]
+  "user123": {               
+    "wishlistArray": ["house1", "house2"],  
+    "houseArray": [                    
+      {
+        "houseId": "house3"
+      },
+      {
+        "houseId": "house4"
+      }
+    ]
+  }
 }
+
 
 ```
 ## Installation
