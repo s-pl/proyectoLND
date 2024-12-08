@@ -1,4 +1,4 @@
-/* Global Styles */
+
 
 body {
     overflow-y: auto;
@@ -75,10 +75,10 @@ header::before {
     transform: scale(1.05);
 }
 
-/* Features Section */
+
 #features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2,1fr);
     gap: 2rem;
     padding: 4rem 2rem;
     background: #f9f9f9;
@@ -261,7 +261,7 @@ form button:hover {
     color: #fff;
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 2rem;

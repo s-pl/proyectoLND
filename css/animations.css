@@ -1,16 +1,18 @@
- /* Los que tengan el tag data-animation serán animados automaticamente. */
- [data-animation] {
+/* animations.css */
+
+/* Estado inicial oculto */
+.fade-in {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 1.2s, transform 1.2s;
-}
-
-[data-animation].animate { 
-
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* Clase activa al aparecer */
+  .fade-in.active {
     opacity: 1;
     transform: translateY(0);
-}
-
+  }
+  
 .property-card {
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }

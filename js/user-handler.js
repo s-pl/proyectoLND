@@ -265,17 +265,18 @@ export async function addToWishlist(HOUSE_ID) {
 
 export async function rentHouse(HOUSE_ID) { // same as above..
   const DAYS_TRAVELLING = localStorage.getItem('daysTravelling');
-
+  const USER_ID = localStorage.getItem("uid");
+  if (!USER_ID) {
+    sendMessage("Debes iniciar sesión para poder alquilar una casa.");
+    return;
+  }
   if (!HOUSE_ID || !DAYS_TRAVELLING) {
     sendMessage("Debes introducir los días que quieres viajar.");
     return;
   }
 
-  const USER_ID = localStorage.getItem("uid");
-  if (!USER_ID) {
-    console.error("No se encontró el UID del usuario en localStorage.");
-    return;
-  }
+
+ 
 
   const USER_REF = DOC(DB, "users", USER_ID);
 

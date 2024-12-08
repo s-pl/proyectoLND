@@ -40,7 +40,7 @@ export function houseLoader() {
             document.querySelectorAll('.property-card').forEach(CARD => {
                 CARD.addEventListener('click', function () {
                     const HOUSE_ID = this.id;
-                    RENT_HOUSE(HOUSE_ID); // if click on the property card, "rent the house"
+                    rentHouse(HOUSE_ID); // if click on the property card, "rent the house"
                 });
             });
         })
@@ -84,7 +84,7 @@ export function filterByPrice(PRICE) {
             document.querySelectorAll('.property-card').forEach(CARD => {
                 CARD.addEventListener('click', function () {
                     const HOUSE_ID = this.id;
-                    RENT_HOUSE(HOUSE_ID);
+                    rentHouse(HOUSE_ID);
                 });
             });
         })
