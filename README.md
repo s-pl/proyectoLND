@@ -1,31 +1,62 @@
-# Luxury Villa Rental Project
 
-## Overview
+# Habitat Go | House renting
 
-This project consists of a responsive website designed to facilitate the rental of luxury villas in exclusive locations. It includes the following key features:
+This project is a simulation of a house-renting website, similar to platforms like Airbnb and HousingAnywhere. It is built using HTML, JavaScript, and CSS.
 
-* **Image Gallery:** Presents available properties with relevant information such as location and prices.
-* **Booking System:** Allows the user to select dates and proceed with the rental of a villa.
-* **Booking Cart:** Includes a floating cart to manage user selections.
-* **Reviews Section:** Displays reviews from satisfied customers.
-* **Contact Form:** Facilitates direct communication with the support team.
 
-The design is optimized to offer a smooth user experience on both mobile and desktop devices.
-## ✨ Features
+![Logo](https://i.postimg.cc/dV1ht4XG/Habitat-Go.png)
 
-* **Header and Navigation:** Intuitive menu with icons that guides the user through the main sections.
-* **Interactive Modals:** Pop-up windows to view property details and confirm actions.
-* **Validated Form:** Implements controls to ensure that the entered data is correct.
-* **Modern Design:** Use of elegant fonts (Poppins) and minimalist styles.
 
-## Technologies
+## Technologies used
 
 * **Frontend:** HTML, CSS, and JavaScript.
 * **Libraries:**
     * Bootstrap Icons for icons.
     * Google Fonts for typography.
 * **Modular Structure:** Code organized into multiple files for easy maintenance and scalability.
- 
+
+The **Auth** and **Database** were hosted and managed with [Firebase](firebase.google.com/)
+
+
+
+
+## Database structure
+A NoSQL (document-based) database was used to store user data, such as wishlists and bookings. The database structure is as follows:
+
+```json
+{
+  "uid": "user123",                
+  "wishlistArray": ["house1", "house2"],  
+  "houseArray": [                    
+    {
+      "houseId": "house3"
+    },
+    {
+      "houseId": "house4",
+    }
+  ]
+}
+
+```
+## Installation
+
+Install and use HabitatGo
+
+```bash
+git clone <git-url>
+cd <project-name>
+```
+
+**IMPORTANT: LIVE SERVER IS CRUCIAL TO MAKE THE WHOLE PROJECT WORK. IF NOT USED, YOU BROWSER COULD BLOCK HTTP/S REQUEST THAT ARE NEEDED FOR FIREBASE**
+    
+## Screenshots
+
+![App Screenshot](https://i.postimg.cc/V6TRDJCV/imagen.png)
+
+
+## Authors
+
+- [Samuel Ponce (s-pl)](https://www.github.com/s-pl)
 
 ## Acknowledgments
 
@@ -35,9 +66,7 @@ The design is optimized to offer a smooth user experience on both mobile and des
 ## Inspiration
 
 The design was inspired by a Dribbble project. Although it is not an exact replica, I took references for the overall structure and design. The color palette used differs from the original design. https://dribbble.com/shots/24824987-Griyo-Real-Estate-Landing-Page
-‍ Author
 
-This project was developed by Samuel Ponce Luna.
 ## Additional Notes
 
 * For future developments, it is planned to integrate an online payment 

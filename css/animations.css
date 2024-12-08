@@ -1,0 +1,22 @@
+ /* Los que tengan el tag data-animation serán animados automaticamente. */
+ [data-animation] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.2s, transform 1.2s;
+}
+
+[data-animation].animate { 
+
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.property-card {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+    
+    transform: scale(1.01);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
